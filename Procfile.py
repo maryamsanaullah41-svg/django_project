@@ -1,0 +1,1 @@
+web: gunicorn maryam_project.wsgi:application
