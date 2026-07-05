@@ -1,0 +1,16 @@
+/* Custom CSS Styles */
+body {
+    background-color: #f4f6f9 !important; /* Saada white background se behtar dynamic gray tint */
+}
+
+/* Dashboard ki main heading ka color badalne ke liye */
+h2.text-primary {
+    color: #1B365D !important; /* Premium Royal Navy Blue */
+    font-weight: 700;
+}
+
+/* Table header ka custom style */
+.table-dark {
+    background-color: #1B365D !important;
+    border-color: #1B365D !important;
+}

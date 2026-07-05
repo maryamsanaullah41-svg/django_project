@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow p-4 border-0 rounded-3">
+                <h2 class="text-primary mb-3 text-center">{{ profile.username|capfirst }}'s Profile</h2>
+                <hr>
+                
+                <p class="mb-2"><strong>Email Address:</strong> <span class="text-secondary">{{ profile.email }}</span></p>
+                
+                <p class="mb-4">
+                    <strong>Biography:</strong> 
+                    {% if "0000" in profile.bio or profile.bio == "" %}
+                        <span class="text-muted font-italic">No biography added yet.</span>
+                    {% else %}
+                        <span class="text-dark">{{ profile.bio }}</span>
+                    {% endif %}
+                </p>
+                
+                <div class="d-grid gap-2">
+                    <a href="{% url 'home_view' %}" class="btn btn-primary rounded-pill">Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
